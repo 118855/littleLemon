@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct LittleLemonApp: App {
     @StateObject var userManager = UserManager()
-
+    
     var body: some Scene {
         WindowGroup {
-            Onboarding().environmentObject(userManager)
+            Onboarding()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                .environmentObject(userManager)
         }
     }
 }

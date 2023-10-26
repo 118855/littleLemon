@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-let kName = "name key"
-let kLastName = "last name key"
-let kEmail = "email key"
-let kIsLoggedIn = "kIsLoggedIn"
-
 struct Onboarding: View {
     @State private var name: String = ""
     @State private var lastName: String = ""
@@ -83,6 +78,7 @@ struct Onboarding: View {
                 shouldNavigate = isLoggedIn
             }
         }
+        // .navigationBarBackButtonHidden(true)
     }
 }
 
